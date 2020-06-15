@@ -13,7 +13,8 @@ $( document ).ready(function() {
         var stillFindingUrls = true;
 
         while (stillFindingUrls) {
-            fetch("/download_screenshots?user="+$('#user_input').val()+"&page="+String(page)+"&photo="+String(currentPhoto))
+            var fetchUrl = "/get_screenshot_url?user="+$('#user_input').val()+"&page="+String(page)+"&photo="+String(currentPhoto);
+            fetch(fetchUrl)
                 .then(data=>{return data.json()})
                 .then(res=>{
                     if (res['url'] == '') {
@@ -23,7 +24,7 @@ $( document ).ready(function() {
                         urls.push(res['url']);
                         $('#urls').val(urls.join("\r\n"));
                     }
-                    
+
                 })
                 .catch(error=>console.log(error));
 
@@ -33,11 +34,11 @@ $( document ).ready(function() {
                 currentPhoto = 0;
                 page+=1;
             }
-console.log(urls);
+
             await sleep(250);
         }
 
-        
+
 
     });
 
