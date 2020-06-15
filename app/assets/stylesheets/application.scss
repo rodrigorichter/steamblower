@@ -14,13 +14,36 @@
  *= require_self
  */
 
- @import "bootstrap";
- @import "home";
- $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
- @import '@fortawesome/fontawesome-free/scss/fontawesome';
- @import '@fortawesome/fontawesome-free/scss/solid';
+@import "bootstrap";
+@import "home";
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@font-face {
+    font-family: 'Oswald';
+    src: font-url('Oswald-Bold.ttf');
+}
 
- h1, h2, h3, h4, h5, h6, label, p {
-     font-family: Arial,sans-serif;
-     color: white;
- }
+label,
+p {
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald';
+    color: white;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h3 {
+    font-size: 28px;
+}

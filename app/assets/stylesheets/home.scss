@@ -1,12 +1,16 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
 header {
     text-align: center;
-
     #logo {
         padding: 40px 20px 25px;
+        a {
+            color: white;
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
 }
 
@@ -15,41 +19,42 @@ main {
     max-width: 1000px;
 }
 
+footer {
+    text-align: center;
+    ul {
+        li {
+            display: inline;
+        }
+    }
+}
+
 body {
     background-color: #1b2838;
     margin: 0;
     padding: 0;
-
     .container {
-        margin: 0 0 40px 0;
+        margin: 0 0 15px 0;
     }
-
     #form_urls_group {
         max-width: 480px;
         margin: 0 auto;
-    };
-
+    }
     #user_input {
         height: 50px;
     }
-
     #urls {
         margin: 0 auto;
         width: 100%;
     }
-
     textarea {
         resize: none;
         color: white;
         background: rgb(33, 34, 36);
         font-size: 9pt;
     }
-
-
     #user_pitch {
         line-height: 1.4em;
     }
-
 }
 
 section {
@@ -61,6 +66,14 @@ section {
     text-align: center;
 }
 
+#section_info {
+    text-align: left;
+}
+
 h1 {
     margin: 0;
+}
+
+.separator {
+    color: rgb(172, 172, 172);
 }

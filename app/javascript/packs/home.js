@@ -2,7 +2,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-$( document ).ready(function() {
+$(document).ready(function() {
 
     $('#user_submit_button').on('click', async function() {
         $('#user_submit_text').hide();
@@ -17,14 +17,13 @@ $( document ).ready(function() {
         var stillFindingUrls = true;
 
         while (stillFindingUrls) {
-            var fetchUrl = "/get_screenshot_url?user="+$('#user_input').val()+"&page="+String(page)+"&photo="+String(currentPhoto);
+            var fetchUrl = "/get_screenshot_url?user=" + $('#user_input').val() + "&page=" + String(page) + "&photo=" + String(currentPhoto);
             fetch(fetchUrl)
-                .then(data=>{return data.json()})
-                .then(res=>{
+                .then(data => { return data.json() })
+                .then(res => {
                     if (res['url'] == '') {
                         stillFindingUrls = false;
-                    }
-                    else {
+                    } else {
                         urls.push(res['url']);
                         $('#urls').val(urls.join("\r\n"));
                         $('#urls').scrollTop($('#urls')[0].scrollHeight);
@@ -32,21 +31,24 @@ $( document ).ready(function() {
                     }
 
                 })
-                .catch(error=>console.log(error));
+                .catch(error => console.log(error));
 
-            currentPhoto+=1;
+            currentPhoto += 1;
 
             if (currentPhoto >= steamPageSize) {
                 currentPhoto = 0;
-                page+=1;
+                page += 1;
             }
 
             await sleep(250);
         }
 
+        $('#user_submit_spinner').hide();
+        $('#user_submit_done').show();
+
     });
 
-    $("#clipboard_button").click(function(){
+    $("#clipboard_button").click(function() {
         $('#urls').select();
         document.execCommand('copy');
     });
