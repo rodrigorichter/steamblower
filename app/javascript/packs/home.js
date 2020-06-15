@@ -9,20 +9,21 @@ $(document).ready(function() {
         $('#user_submit_spinner').show();
         $('#user_submit_button').prop('disabled', true);
 
+        var steamPageSize = 50;
+        var urls = [];
+        var failThreshold = 4;
+        var failedAttempts = 0;
+
         var page = 1;
         var currentPhoto = 0;
 
-        var steamPageSize = 50;
-        var urls = [];
-        var stillFindingUrls = true;
-
-        while (stillFindingUrls) {
+        while (failedAttempts > failThreshold) {
             var fetchUrl = "/get_screenshot_url?user=" + $('#user_input').val() + "&page=" + String(page) + "&photo=" + String(currentPhoto);
             fetch(fetchUrl)
                 .then(data => { return data.json() })
                 .then(res => {
                     if (res['url'] == '') {
-                        stillFindingUrls = false;
+                        failedAttempts += 1;
                     } else {
                         urls.push(res['url']);
                         $('#urls').val(urls.join("\r\n"));
@@ -40,7 +41,7 @@ $(document).ready(function() {
                 page += 1;
             }
 
-            await sleep(250);
+            await sleep(400);
         }
 
         $('#user_submit_spinner').hide();
