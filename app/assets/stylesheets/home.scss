@@ -20,15 +20,22 @@ body {
     margin: 0;
     padding: 0;
 
+    .container {
+        margin: 0 0 40px 0;
+    }
+
     #form_urls_group {
         max-width: 480px;
         margin: 0 auto;
     };
 
+    #user_input {
+        height: 50px;
+    }
+
     #urls {
-        max-width: 640px;
         margin: 0 auto;
-        width: 100vh;
+        width: 100%;
     }
 
     textarea {
@@ -37,13 +44,19 @@ body {
         background: rgb(33, 34, 36);
         font-size: 9pt;
     }
+
+
+    #user_pitch {
+        line-height: 1.4em;
+    }
+
 }
 
 section {
     margin: 0 auto 20px auto;
     max-width: 758px;
     border-radius: 2px;
-    padding: 10px 30px 5px;
+    padding: 20px 30px 15px;
     background: rgba(0, 0, 0, 0.4);
     text-align: center;
 }

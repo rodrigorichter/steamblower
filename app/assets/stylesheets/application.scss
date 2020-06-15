@@ -16,6 +16,9 @@
 
  @import "bootstrap";
  @import "home";
+ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+ @import '@fortawesome/fontawesome-free/scss/fontawesome';
+ @import '@fortawesome/fontawesome-free/scss/solid';
 
  h1, h2, h3, h4, h5, h6, label, p {
      font-family: Arial,sans-serif;

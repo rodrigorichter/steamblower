@@ -5,6 +5,10 @@ function sleep(ms) {
 $( document ).ready(function() {
 
     $('#user_submit_button').on('click', async function() {
+        $('#user_submit_text').hide();
+        $('#user_submit_spinner').show();
+        $('#user_submit_button').prop('disabled', true);
+
         var page = 1;
         var currentPhoto = 0;
 
@@ -40,8 +44,11 @@ $( document ).ready(function() {
             await sleep(250);
         }
 
+    });
 
-
+    $("#clipboard_button").click(function(){
+        $('#urls').select();
+        document.execCommand('copy');
     });
 
 });
