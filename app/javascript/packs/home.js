@@ -17,7 +17,7 @@ $(document).ready(function() {
         var page = 1;
         var currentPhoto = 0;
 
-        while (failedAttempts > failThreshold) {
+        while (failedAttempts < failThreshold) {
             var fetchUrl = "/get_screenshot_url?user=" + $('#user_input').val() + "&page=" + String(page) + "&photo=" + String(currentPhoto);
             fetch(fetchUrl)
                 .then(data => { return data.json() })
