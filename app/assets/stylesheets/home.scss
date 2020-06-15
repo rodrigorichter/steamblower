@@ -1,3 +1,53 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+header {
+    text-align: center;
+
+    #logo {
+        padding: 40px 20px 25px;
+    }
+}
+
+main {
+    margin: 0 auto 0 auto;
+    max-width: 1000px;
+}
+
+body {
+    background-color: #1b2838;
+    margin: 0;
+    padding: 0;
+
+    #form_urls_group {
+        max-width: 480px;
+        margin: 0 auto;
+    };
+
+    #urls {
+        max-width: 640px;
+        margin: 0 auto;
+        width: 100vh;
+    }
+
+    textarea {
+        resize: none;
+        color: white;
+        background: rgb(33, 34, 36);
+        font-size: 9pt;
+    }
+}
+
+section {
+    margin: 0 auto 20px auto;
+    max-width: 758px;
+    border-radius: 2px;
+    padding: 10px 30px 5px;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}

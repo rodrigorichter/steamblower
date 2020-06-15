@@ -23,6 +23,8 @@ $( document ).ready(function() {
                     else {
                         urls.push(res['url']);
                         $('#urls').val(urls.join("\r\n"));
+                        $('#urls').scrollTop($('#urls')[0].scrollHeight);
+                        $('#urls').focus();
                     }
 
                 })

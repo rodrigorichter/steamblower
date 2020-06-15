@@ -6,7 +6,7 @@ class HomeController < ApplicationController
         require 'open-uri'
 
         return_url = ''
-        page_url = "https://steamcommunity.com/id/#{params[:user]}/screenshots/?view=grid&p=#{params[:page]}"
+        page_url = "https://steamcommunity.com/profiles/#{params[:user]}/screenshots/?view=grid&p=#{params[:page]}"
         will_have_second_try = true
         has_requested_already = false
 

@@ -1,15 +1,42 @@
 <%= javascript_pack_tag 'home' %>
 
-<h1>Steam Blower</h1>
-<h4>Download all steam screenshots</h4>
 
-<form>
-  <div class="form-group">
-    <label for="user_input">Steam username</label>
-    <input type="text" class="form-control" id="user_input">
-  </div>
-  <button type="button" class="btn btn-primary" id="user_submit_button">Submit</button>
-</form>
+<body>
 
-<textarea id="urls" rows="4" cols="50"></textarea>
+  <header>
+    <div id="logo">
+      <h1>Steam Blower</h1>
+    </div>
+  </header>
 
+  <main>
+    <section>
+
+      <div class="container">
+        <div class="h-100 row align-items-center">
+          <div class="col">
+
+            <h2>Type the <a href="https://steamidfinder.com/" target="_blank">SteamID64</a> to get their screenshots</h2>
+            <br>
+
+            <div class="input-group mb-3" id="form_urls_group">
+              <input type="text" class="form-control" id="user_input" placeholder="Enter the SteamID64 here">
+              <div class="input-group-append">
+              <button type="button" class="btn btn-primary" id="user_submit_button">Get URLs</button>
+              </div>
+            </div>
+
+
+            <textarea readonly id="urls" rows="8" cols="50">The screenshots URLs will appear here...</textarea>
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+</body>
