@@ -5,7 +5,7 @@
 ![demo](https://user-images.githubusercontent.com/15044782/90322212-cc264480-df27-11ea-9f6a-a394596fc1de.png)
 
 ## Usage
-Just head to the [steamblower app](https://steamblower.herokuapp.com/), type your SteamID, and it's done!
+Just head to the [steamblower page](https://steamblower.herokuapp.com/), type your SteamID, and it's done!
 
 ## How It Works
 This project is a `rails` application hosted on `heroku`.
