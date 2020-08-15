@@ -1,6 +1,6 @@
 # Steamblower
 
-Steamblower is a web application that scrapes your steam profile and hands it to you all your public screenshots, so you can batch download them with an extension/download manager
+[Steamblower](https://steamblower.herokuapp.com/) is a web application that scrapes your steam profile and hands it to you all your public screenshots, so you can batch download them with an extension/download manager
 
 ![demo](https://user-images.githubusercontent.com/15044782/90322212-cc264480-df27-11ea-9f6a-a394596fc1de.png)
 
@@ -19,7 +19,7 @@ This project is a `rails` application hosted on `heroku`.
 For an implementation that would improve performance significantly, a server-side background job could run for each user. This job would scrape all screenshots in a single method, making very few requests to the steam servers. Then the user would send timed requests to steamblower and receive a list of many screenshots, instead of sending a request for each screenshot.
 
 ## Liked it? Help spread it further!
-This application was created by me when I found myself wanting to download my 300 steam screenshots, and finding out they weren't stored locally on my PC. After extensive google research, I found some outdated windows programs and a javascript script that didn't work. This application works great(tested on aug 15, 2020) and will be updated if steam changes anything on their front-end. If you found it useful yourself, consider reaching out to other steam tools, forums and websites and bring more attention to this tool.
+[This application](https://steamblower.herokuapp.com/) was created by me when I found myself wanting to download my 300 steam screenshots, and finding out they weren't stored locally on my PC. After extensive google research, I found some outdated windows programs and a javascript script that didn't work. This application works great(tested on aug 15, 2020) and will be updated if steam changes anything on their front-end. If you found it useful yourself, consider reaching out to other steam tools, forums and websites and bring more attention to this tool.
 
 ## Contributing
 1. Clone this repository.
