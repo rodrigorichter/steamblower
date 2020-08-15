@@ -1,8 +1,8 @@
 # Steamblower
 
-![demo](https://user-images.githubusercontent.com/15044782/90322212-cc264480-df27-11ea-9f6a-a394596fc1de.png)
-
 Steamblower is a web application that scrapes your steam profile and hands it to you all your public screenshots, so you can batch download them with an extension/download manager
+
+![demo](https://user-images.githubusercontent.com/15044782/90322212-cc264480-df27-11ea-9f6a-a394596fc1de.png)
 
 ## Usage
 Just head to the [steamblower app](https://steamblower.herokuapp.com/), type your SteamID, and it's done!
